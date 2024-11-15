@@ -21,6 +21,7 @@ public abstract class Envio {
 	}
 	public boolean cumple(LocalDate ini,LocalDate fin) {
 		DateLapse l = new DateLapse(ini,fin);
+
 		return l.includesDate(fechaDespacho);
 	}
 	
