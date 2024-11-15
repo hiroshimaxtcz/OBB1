@@ -1,4 +1,4 @@
-package ar.edu.unlp.objetos.uno.ejercicio19;
+package ar.edu.unlp.objetos.uno;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

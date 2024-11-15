@@ -12,10 +12,8 @@ public class EnvioInterUrbano extends Envio{
 	public double getDistanciakm() {
 		return distanciakm;
 	}
-	
 	public int costokm() {
-		if(this.getDistanciakm() <100) {
-			
+		if(this.getDistanciakm() <100){
 			return 20;
 		}
 		else if (this.getDistanciakm() <500) {
@@ -26,8 +24,7 @@ public class EnvioInterUrbano extends Envio{
 	
 	@Override
 	public double getDistancia() {
-		
-		return (this.costokm()*this.getDistanciakm());
+		return (this.costokm()*super.getPeso());
 	}
 
 }
