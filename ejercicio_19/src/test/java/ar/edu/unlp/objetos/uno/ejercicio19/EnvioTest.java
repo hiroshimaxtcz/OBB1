@@ -32,13 +32,13 @@ class EnvioTest {
 		p.agregarEnvio(envioLocal);
 		p.agregarEnvio(envioInternacional);
 		
-		assertEquals(p.cantidadEnvios(),3);
+		assertEquals(3,p.cantidadEnvios());
 		
 		c.agregarEnvio(envioInterUrbano);
 		c.agregarEnvio(envioLocal);
 		c.agregarEnvio(envioInternacional);
 
-		assertEquals(p.cantidadEnvios(),3);
+		assertEquals(3,p.cantidadEnvios());
 	}
 	@Test
 	void testMontoAPagar() {
@@ -51,11 +51,11 @@ class EnvioTest {
 		c.agregarEnvio(envioInternacional);
 
 		//fecha donde se realizaron envios
-		assertEquals (p.calcularMonto(LocalDate.of(2024, 11, 1), LocalDate.of(2024, 11, 30)),14850.0);
-		assertEquals (c.calcularMonto(LocalDate.of(2024, 11, 1), LocalDate.of(2024, 11, 30)),16500.0);
+		assertEquals (14850.0,p.calcularMonto(LocalDate.of(2024, 11, 1), LocalDate.of(2024, 11, 30)));
+		assertEquals (16500.0,c.calcularMonto(LocalDate.of(2024, 11, 1), LocalDate.of(2024, 11, 30)));
 		//fecha donde no se realizaron envio
-		assertEquals (p.calcularMonto(LocalDate.of(2024, 10, 1), LocalDate.of(2024, 11, 1)),0);
-		assertEquals (c.calcularMonto(LocalDate.of(2024, 10, 1), LocalDate.of(2024, 11, 1)),0);
+		assertEquals (0,p.calcularMonto(LocalDate.of(2024, 10, 1), LocalDate.of(2024, 11, 1)));
+		assertEquals (0,c.calcularMonto(LocalDate.of(2024, 10, 1), LocalDate.of(2024, 11, 1)));
 	
 	}
 
