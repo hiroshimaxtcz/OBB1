@@ -37,6 +37,8 @@ class EnvioTest {
 		c.agregarEnvio(envioInterUrbano);
 		c.agregarEnvio(envioLocal);
 		c.agregarEnvio(envioInternacional);
+
+		assertEquals(p.cantidadEnvios(),3);
 	}
 	@Test
 	void testMontoAPagar() {
