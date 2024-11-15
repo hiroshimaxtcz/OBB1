@@ -6,10 +6,10 @@ import ar.edu.unlp.objetos.uno.ejercicio14A.DateLapse;
 
 public abstract class Envio {
 	private LocalDate fechaDespacho;
-	private double direccionOrigen;
-	private double direccionDestino;
+	private String direccionOrigen;
+	private String direccionDestino;
 	private double peso;
-	public Envio(LocalDate fechaDespacho, double direccionOrigen, double direccionDestino,double peso) {
+	public Envio(LocalDate fechaDespacho, String direccionOrigen, String direccionDestino,double peso) {
 		super();
 		this.fechaDespacho = fechaDespacho;
 		this.direccionOrigen = direccionOrigen;

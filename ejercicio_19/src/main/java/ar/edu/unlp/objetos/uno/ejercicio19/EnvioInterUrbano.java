@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class EnvioInterUrbano extends Envio{
 	private double distanciakm;
-	public EnvioInterUrbano(LocalDate fechaDespacho, double direccionOrigen, double direccionDestino,double peso,double distanciakm){
+	public EnvioInterUrbano(LocalDate fechaDespacho, String direccionOrigen, String direccionDestino,double peso,double distanciakm){
 		super(fechaDespacho,direccionOrigen,direccionDestino,peso);
 		this.distanciakm=distanciakm;
 	}
