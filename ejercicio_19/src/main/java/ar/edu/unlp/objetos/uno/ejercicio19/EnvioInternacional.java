@@ -10,7 +10,7 @@ public class EnvioInternacional extends Envio{
 	}
 	@Override
 	public double getDistancia() {
-		return 5000* super.getPeso();
+		return 5000* this.getPeso();
 	}
 
 }
