@@ -6,7 +6,7 @@ public class EnvioLocal extends Envio {
 	private Boolean esExpress=false;
 	public EnvioLocal(LocalDate fechaDespacho, String direccionOrigen,  String direccionDestino,double peso,Boolean esExpress){
 		super(fechaDespacho,direccionOrigen,direccionDestino,peso);
-		this.esExpress=true;
+		this.esExpress=esExpress;
 		
 	}
 	public int monto() {

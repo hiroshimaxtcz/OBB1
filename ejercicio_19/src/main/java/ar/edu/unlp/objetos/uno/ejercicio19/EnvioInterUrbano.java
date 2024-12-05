@@ -24,7 +24,7 @@ public class EnvioInterUrbano extends Envio{
 	
 	@Override
 	public double getDistancia() {
-		return (this.costokm()*super.getPeso());
+		return (this.costokm()*this.getPeso());
 	}
 
 }
