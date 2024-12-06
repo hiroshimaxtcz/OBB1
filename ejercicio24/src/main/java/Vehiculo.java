@@ -12,29 +12,26 @@ public class Vehiculo {
 		this.valorMercado = valorMercado;
 		this.cantPasajeros = cantPasajeros;
 	}
-	
 	public boolean hayLugar(int cantidad) {
-		return (cantPasajeros-cantidad)>=0;
+
+		return (this.getCantPasajeros()-cantidad)>0;
 	}
-	
-	
 	public Conductor getC() {
+
 		return c;
 	}
-
-	public String getDescripcion() {
-		return descripcion;
-	}
-
 	public int getAnioFabricacion() {
+
 		return anioFabricacion;
 	}
 
 	public double getValorMercado() {
+
 		return valorMercado;
 	}
 
 	public int getCantPasajeros() {
+
 		return cantPasajeros;
 	}
 

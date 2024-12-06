@@ -7,12 +7,9 @@ public class Pasajero extends Usuario{
 		super(nombre, saldo);
 		misViajes= new LinkedList<Viaje>();
 	}
-	
-	public List<Viaje> getMisViajes() {
-		return misViajes;
-	}
 
 	public void agregarViaje(Viaje v) {
+
 		misViajes.add(v);
 	}
 	public boolean tieneSaldo() {
@@ -28,18 +25,16 @@ public class Pasajero extends Usuario{
 	}
 	
 	public boolean viajesEn30() {
-		
 		return misViajes.stream()
 				.anyMatch(aux->aux.fueRealizado());
 	}
 
 	@Override
 	public double aplicarBonificacion(double monto) {
-		if(this.getMisViajes().stream().anyMatch(aux-> aux.fueHecho())) {
+		if(misViajes.size()>0) {
 			return 500;
 		}
-		else
-		return 0;
+		else return 0;
 	}
 	
 	

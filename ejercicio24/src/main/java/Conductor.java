@@ -4,13 +4,14 @@ public class Conductor extends Usuario{
 		super(nombre, saldo);
 		this.miVehiculo=miVehiculo;
 	}
-
+	//aca le cargo menos jsjs
 	@Override
 	public double devolverConDescuento(double monto) {
 		
-		return monto+(monto * miVehiculo.getDescuento());
+		return monto-(monto * miVehiculo.getDescuento());
 	}
 
+	//aca le cobro mas
 	@Override
 	public double aplicarBonificacion(double monto) {
 		

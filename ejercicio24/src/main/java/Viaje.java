@@ -23,19 +23,20 @@ public class Viaje {
 	public void registrarPasajero(Pasajero p) {
 		if(v.hayLugar(L.size()) && this.Cumple() && p.tieneSaldo()) {
 			L.add(p);
+			p.agregarViaje(this);
 		}
-		
-		
 	}
 	private boolean Cumple() {
-		return ChronoUnit.DAYS.between(LocalDate.now(),this.getFechaViaje())>2;
-		
+		return this.fechaValid(2);
 	}
-	
+	public boolean fechaValid(int cant){
+		return ChronoUnit.DAYS.between(LocalDate.now(),this.getFechaViaje()) > cant;
+
+	}
 	//procesar viaje
 	public void descontarCostoViaje() {
-		double valor= this.getCostoTotal()/this.getL().size();
-		this.getL().forEach(aux -> aux.descontarSaldo(valor));
+		double valor= this.getCostoTotal()/this.L.size();
+		this.L.forEach(aux -> aux.descontarSaldo(valor));
 	}
 	
 	public double getCostoTotal() {
@@ -47,14 +48,9 @@ public class Viaje {
 		return fechaViaje;
 	}
 
-	public List<Usuario> getL() {
-		return L;
-	}
+
 	public boolean fueRealizado() {
-		return ChronoUnit.DAYS.between(LocalDate.now(),this.getFechaViaje())<=30;
-	}
-	public boolean fueHecho() {
-		return ChronoUnit.DAYS.between(LocalDate.now(),this.getFechaViaje())>0;
+		return !this.fechaValid(30);
 	}
 	
 }
