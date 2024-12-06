@@ -13,7 +13,7 @@ public class Guarderia extends Servicio{
 		M = m;
 	}
 	public LocalDate getFecha(){
-		return this.fecha;
+		return fecha;
 		
 	}
 	
