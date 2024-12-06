@@ -17,11 +17,12 @@ public class Usuario {
     }
 
     public void CrearPedido(FormaPago F, FormaEnvio E, Producto P, int cant){
-        Producto p= misProductos.stream()
+        /*Producto p= misProductos.stream()
                 .filter(aux ->aux.cumple(cant))
                 .findFirst().orElse(null);
-        if(! (p == null)){
-            Pedido pe= new Pedido(E,F,p,cant);
+        */
+        if(P.cumple(cant)){
+            Pedido pe= new Pedido(E,F,P,cant);
             misPedidos.add(pe);
         }
     }
