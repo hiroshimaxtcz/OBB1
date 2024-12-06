@@ -10,7 +10,7 @@ public class Consulta extends ServicioMedico{
 		this.fechaAtencion = fechaAtencion;
 	}
 
-	public LocalDate getFechaAtencion() {
+	public LocalDate getFecha() {
 		return fechaAtencion;
 	}
 
