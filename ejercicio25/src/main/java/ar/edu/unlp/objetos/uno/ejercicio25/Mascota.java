@@ -8,7 +8,7 @@ public class Mascota {
 	private LocalDate fecha;
 	private List<Servicio> miServicio;	
 	private String especie;
-	public Mascota(String raza, LocalDate fecha, List<Servicio> miServicio, String especie) {
+	public Mascota(String raza, LocalDate fecha, String especie) {
 		this.raza = raza;
 		this.fecha = fecha;
 		this.miServicio = new LinkedList<Servicio>();
