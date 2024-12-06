@@ -15,7 +15,7 @@ public class Conductor extends Usuario{
 	@Override
 	public double aplicarBonificacion(double monto) {
 		
-		return monto+(miVehiculo.getValorMercado()*0.1);
+		return monto-(miVehiculo.getValorMercado()*0.1);
 	}
 
 }

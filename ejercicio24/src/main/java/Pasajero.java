@@ -32,9 +32,9 @@ public class Pasajero extends Usuario{
 	@Override
 	public double aplicarBonificacion(double monto) {
 		if(misViajes.size()>0) {
-			return 500;
+			return monto-500;
 		}
-		else return 0;
+		else return monto;
 	}
 	
 	
