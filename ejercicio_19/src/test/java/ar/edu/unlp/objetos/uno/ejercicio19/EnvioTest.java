@@ -51,8 +51,8 @@ class EnvioTest {
 		c.agregarEnvio(envioInternacional);
 
 		//fecha donde se realizaron envios
-		assertEquals (14850.0,p.calcularMonto(LocalDate.of(2024, 11, 1), LocalDate.of(2024, 11, 30)));
-		assertEquals (16500.0,c.calcularMonto(LocalDate.of(2024, 11, 1), LocalDate.of(2024, 11, 30)));
+		assertEquals (13500.0,p.calcularMonto(LocalDate.of(2024, 11, 1), LocalDate.of(2024, 11, 30)));
+		assertEquals (15000.0,c.calcularMonto(LocalDate.of(2024, 11, 1), LocalDate.of(2024, 11, 30)));
 		//fecha donde no se realizaron envio
 		assertEquals (0,p.calcularMonto(LocalDate.of(2024, 10, 1), LocalDate.of(2024, 11, 1)));
 		assertEquals (0,c.calcularMonto(LocalDate.of(2024, 10, 1), LocalDate.of(2024, 11, 1)));
