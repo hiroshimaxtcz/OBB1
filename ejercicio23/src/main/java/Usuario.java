@@ -27,7 +27,7 @@ public class Usuario {
         }
     }
 
-    /*
+    /* faltaria este metodo para implementar el punto b
     * public BagImpl<String> cantCategoria() {
 		BagImpl<String> bag = new BagImpl<String>();
 		this.pedidos.stream().forEach(p -> bag.add(p.getCategoria()));
