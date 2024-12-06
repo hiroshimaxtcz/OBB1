@@ -13,7 +13,9 @@ public class Vacunacion extends ServicioMedico{
 		this.costo = costo;
 		this.fecha = fecha;
 	}
-	
+	public LocalDate getFecha(){
+		return fecha;
+	}
 	@Override
 	public double materiales() {
 		return 500;

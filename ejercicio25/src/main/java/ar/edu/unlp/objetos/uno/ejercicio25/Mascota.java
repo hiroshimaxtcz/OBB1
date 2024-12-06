@@ -37,12 +37,14 @@ public class Mascota {
 		return total;
 	}
 	public boolean cumple() {
-		
+		return miServicio.size() >= 5;
+		/*
 		if(miServicio.size() >= 5) {
 			return true;
 			}
 		else
 			return false;
+		*/
 	}
 	
 }

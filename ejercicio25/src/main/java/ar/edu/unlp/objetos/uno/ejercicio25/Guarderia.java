@@ -12,6 +12,11 @@ public class Guarderia extends Servicio{
 		this.fecha = fecha;
 		M = m;
 	}
+	public LocalDate getFecha(){
+		return fecha;
+		
+	}
+	
 	@Override
 	public double DevolverMonto() {
 		double total = 500 *cantDias;
