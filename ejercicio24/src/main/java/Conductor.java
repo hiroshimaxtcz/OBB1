@@ -11,7 +11,7 @@ public class Conductor extends Usuario{
 		return monto-(monto * miVehiculo.getDescuento());
 	}
 
-	//aca le cobro mas
+	//aca le cobro mas sjsj
 	@Override
 	public double aplicarBonificacion(double monto) {
 		
