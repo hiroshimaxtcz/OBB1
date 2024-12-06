@@ -5,17 +5,13 @@ import java.time.LocalDate;
 public class Vacunacion extends ServicioMedico{
 	private String nombre;
 	private double costo;
-	private LocalDate fecha;
 	
 	public Vacunacion(Medico M, String nombre, double costo, LocalDate fecha) {
-		super(M);
+		super(M,fecha);
 		this.nombre = nombre;
 		this.costo = costo;
-		this.fecha = fecha;
 	}
-	public LocalDate getFecha(){
-		return fecha;
-	}
+
 	@Override
 	public double materiales() {
 		return 500;

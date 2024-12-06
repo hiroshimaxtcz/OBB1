@@ -12,6 +12,7 @@ public class Guarderia extends Servicio{
 		this.fecha = fecha;
 		M = m;
 	}
+	@Override
 	public LocalDate getFecha(){
 		return fecha;
 		

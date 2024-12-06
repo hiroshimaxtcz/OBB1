@@ -21,7 +21,7 @@ public class Viaje {
 	}
 
 	public void registrarPasajero(Pasajero p) {
-		if(v.hayLugar(L.size()) && this.Cumple() && p.tieneSaldo()) {
+		if(v.hayLugar(L.size()+1) && this.Cumple() && p.tieneSaldo()) {
 			L.add(p);
 			p.agregarViaje(this);
 		}

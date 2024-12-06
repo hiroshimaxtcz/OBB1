@@ -17,15 +17,17 @@ public class Mascota {
 	
 	public Servicio DarAltaConsulta(Medico M) {
 		Consulta c= new Consulta(M,LocalDate.now());
-		
+		miServicio.add(c);
 		return c;
 	}
 	public Servicio DarAltaVacunacion(Medico M , String nombre, double costo) {
 		Vacunacion v= new Vacunacion(M,nombre,costo,LocalDate.now());
+		miServicio.add(v);
 		return v;
 	}
 	public Servicio DarAltaGuarderia(int cantDias) {
 		Guarderia g= new Guarderia(cantDias,LocalDate.now(),this);
+		miServicio.add(g);
 		return g;
 	}
 	

@@ -23,14 +23,17 @@ public abstract class Usuario {
 
 		this.saldo +=saldo ;
 	}
+
 	public void descontarSaldo(double monto) {
 
 		this.aplicarBonificacion(monto);
 	}
+
 	public void cargar(double monto) {
 		double x=this.devolverConDescuento(monto);
 		this.aumentarSaldo(x);
 	}
+
 	public abstract double devolverConDescuento(double monto);
 	public abstract double aplicarBonificacion(double monto);
 }
