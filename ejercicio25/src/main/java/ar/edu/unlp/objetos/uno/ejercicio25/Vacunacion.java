@@ -14,7 +14,7 @@ public class Vacunacion extends ServicioMedico{
 		this.fecha = fecha;
 	}
 	public LocalDate getFecha(){
-		return this.fecha;
+		return fecha;
 	}
 	@Override
 	public double materiales() {
