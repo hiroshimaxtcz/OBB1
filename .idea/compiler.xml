@@ -9,9 +9,10 @@
         <module name="ejercicio24" />
         <module name="ejercicio23" />
         <module name="ejercicio21" />
+        <module name="Estudiante" />
+        <module name="ejercicio25" />
         <module name="ejercicio_19" />
         <module name="ejemplo" />
-        <module name="ejercicio25" />
       </profile>
     </annotationProcessing>
   </component>
