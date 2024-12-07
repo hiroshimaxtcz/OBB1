@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Estudiante {
+
     static class Alumno {
         private String nombre;
         private int anioIngreso;
@@ -48,14 +49,14 @@ public class Estudiante {
     // 2. MAP
     public List<String> nombresAlumnos(List<Alumno> alumnos) {
         return alumnos.stream()
-                .map(Alumno::getNombre)
+                .map(alumno -> alumno.getNombre())
                 .collect(Collectors.toList());
     }
 
     // 3. MAPTODOUBLE | MAPTOINT
     public double promedioMasAlto(List<Alumno> alumnos) {
         return alumnos.stream()
-                .mapToDouble(Alumno::getPromedio)
+                .mapToDouble(alumno -> alumno.getPromedio())
                 .max()
                 .orElse(0);
     }
@@ -82,7 +83,7 @@ public class Estudiante {
     // 7. MAX | MIN
     public Alumno mejorPromedio(List<Alumno> alumnos) {
         return alumnos.stream()
-                .max(Comparator.comparingDouble(Alumno::getPromedio))
+                .max((a1, a2) -> Double.compare(a1.getPromedio(), a2.getPromedio()))
                 .orElse(null);
     }
 
@@ -103,7 +104,7 @@ public class Estudiante {
     // 10. AVERAGE
     public double promedioGeneral(List<Alumno> alumnos) {
         return alumnos.stream()
-                .mapToDouble(Alumno::getPromedio)
+                .mapToDouble(alumno -> alumno.getPromedio())
                 .average()
                 .orElse(0);
     }
@@ -111,7 +112,7 @@ public class Estudiante {
     // 11. SORTED
     public List<Alumno> ordenarPorPromedioDescendente(List<Alumno> alumnos) {
         return alumnos.stream()
-                .sorted(Comparator.comparingDouble(Alumno::getPromedio).reversed())
+                .sorted((a1, a2) -> Double.compare(a2.getPromedio(), a1.getPromedio()))
                 .collect(Collectors.toList());
     }
 
@@ -146,5 +147,6 @@ public class Estudiante {
         System.out.println("Alumnos ordenados por promedio descendente: " + app.ordenarPorPromedioDescendente(alumnos));
         System.out.println("Primer alumno cuyo nombre empieza con 'A': " + app.primerAlumnoCon(alumnos, "A"));
     }
+}
 
 }
