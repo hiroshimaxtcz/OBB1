@@ -147,6 +147,22 @@ public class Estudiante {
         System.out.println("Alumnos ordenados por promedio descendente: " + app.ordenarPorPromedioDescendente(alumnos));
         System.out.println("Primer alumno cuyo nombre empieza con 'A': " + app.primerAlumnoCon(alumnos, "A"));
     }
-}
+    //RESULTADO DE LA COMPILACION
+    /*
+    -Alumnos ingresantes en 2021: [Ana Gomez (Ingreso: 2021, Promedio: 9.2)]
+    -Nombres de los alumnos: [Juan Perez, Ana Gomez, Luis Martinez]
+    -Promedio más alto: 9.2
+    -Primeros 2 alumnos: [Juan Perez (Ingreso: 2020, Promedio: 8.5), Ana Gomez (Ingreso: 2021, Promedio: 9.2)]
+    -¿Algún alumno ingresó antes de 2020? true
+    -¿Todos tienen promedio mayor a 7? true
+    -Alumno con mejor promedio: Ana Gomez (Ingreso: 2021, Promedio: 9.2)
+    -Cantidad de alumnos con promedio > 8: 2
+    -Total de exámenes tomados: 9
+    -Promedio general de los alumnos: 8.4
+    -Alumnos ordenados por promedio descendente: [Ana Gomez (Ingreso: 2021, Promedio: 9.2), Juan Perez (Ingreso: 2020, Promedio: 8.5), Luis Martinez (Ingreso: 2019, Promedio: 7.5)]
+    -Primer alumno cuyo nombre empieza con 'A': Ana Gomez (Ingreso: 2021, Promedio: 9.2)
+    */
 
 }
+
+
